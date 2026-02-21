@@ -1,9 +1,16 @@
 import asyncio, random, socket, struct, json, aiohttp, os, sys, time
 from colorama import Fore, Style, init
 import config.config as config
+import threading
+from collections import deque
 from concurrent.futures import ThreadPoolExecutor
 
-executor = ThreadPoolExecutor(max_workers=config.CONCURRENCY)
+try:
+    import tkinter as tk
+except Exception:
+    tk = None
+
+executor = ThreadPoolExecutor(max_workers=max(50, config.CONCURRENCY * 2))
 
 http_session: aiohttp.ClientSession | None = None
 
@@ -118,6 +125,14 @@ def set_console_size(cols: int = 120, lines: int = 40):
 scanned = 0
 found = 0
 with_players = 0
+sent_count = 0
+
+# timestamps of recent scans (for rate calculation)
+scan_times: deque = deque(maxlen=10000)
+scan_times_lock = threading.Lock()
+# recent found servers (most-recent first)
+recent_found: deque = deque(maxlen=20)
+recent_found_lock = threading.Lock()
 
 # ========= TITLE =========
 
@@ -141,6 +156,153 @@ def set_title():
             sys.stdout.flush()
         except Exception:
             pass
+
+#========= RATE CALCULATION =========
+def compute_rate_per_hour(window_seconds: int = 60) -> float:
+    """Compute an extrapolated servers/hour rate over last `window_seconds` seconds."""
+    now = time.time()
+    cutoff = now - window_seconds
+    with scan_times_lock:
+        count = 0
+        for ts in reversed(scan_times):
+            if ts >= cutoff:
+                count += 1
+            else:
+                break
+    if window_seconds == 0:
+        return 0.0
+    return (count / window_seconds) * 3600.0
+
+# ========= STATS WINDOW (TKINTER) =========
+def run_stats_window(update_interval_ms: int = 1000):
+    if tk is None:
+        return
+
+    root = tk.Tk()
+    root.overrideredirect(True)  # entfernt weißen Windows Rahmen
+    root.geometry("340x340")
+    root.configure(bg="#000000")
+
+    # Farben
+    BG = "#000000"
+    CARD = "#0a0a0a"
+    PINK = "#ff00aa"
+    PURPLE = "#a020f0"
+    GLOW = "#ff4df2"
+
+    # ===== Custom Title Bar =====
+    title_bar = tk.Frame(root, bg="#000000")
+    title_bar.pack(fill="x")
+
+    title_label = tk.Label(
+        title_bar,
+        text="SCANNER STATS",
+        bg="#000000",
+        fg=PINK,
+        font=("Segoe UI", 11, "bold")
+    )
+    title_label.pack(side="left", padx=10, pady=4)
+
+    close_btn = tk.Label(
+        title_bar,
+        text="  ✕  ",
+        bg="#000000",
+        fg=PINK,
+        font=("Segoe UI", 10, "bold"),
+        cursor="hand2"
+    )
+    close_btn.pack(side="right")
+    close_btn.bind("<Button-1>", lambda e: root.destroy())
+
+    # Fenster bewegbar machen
+    def start_move(e):
+        root.x = e.x
+        root.y = e.y
+
+    def do_move(e):
+        root.geometry(f"+{e.x_root - root.x}+{e.y_root - root.y}")
+
+    title_bar.bind("<Button-1>", start_move)
+    title_bar.bind("<B1-Motion>", do_move)
+
+    # ===== Main Card =====
+    frame = tk.Frame(root, bg=CARD, highlightbackground=PURPLE, highlightthickness=1)
+    frame.pack(padx=15, pady=15, fill="both", expand=True)
+
+    labels = {}
+    keys = ["Scanned", "Found", "With Players", "Server scanner per hour", "Webhooks Sent"]
+
+    for i, k in enumerate(keys):
+        tk.Label(
+            frame,
+            text=k,
+            bg=CARD,
+            fg=PURPLE,
+            font=("Segoe UI", 9)
+        ).grid(row=i, column=0, sticky="w", padx=8, pady=4)
+
+        labels[k] = tk.Label(
+            frame,
+            text="0",
+            bg=CARD,
+            fg=PINK,
+            font=("Consolas", 11, "bold")
+        )
+        labels[k].grid(row=i, column=1, sticky="e", padx=8, pady=4)
+
+    # ===== Recent List =====
+    tk.Label(
+        frame,
+        text="Recent",
+        bg=CARD,
+        fg=PURPLE,
+        font=("Segoe UI", 9)
+    ).grid(row=len(keys), column=0, sticky="w", padx=8, pady=(10, 4))
+
+    recent_box = tk.Listbox(
+        frame,
+        height=5,
+        bg="#050505",
+        fg=PINK,
+        bd=0,
+        highlightthickness=0,
+        font=("Consolas", 9)
+    )
+    recent_box.grid(row=len(keys), column=1, sticky="e", padx=8, pady=(10, 4))
+
+    # ===== Neon Glow Animation =====
+    glow_state = [0]
+
+    def animate_title():
+        colors = [PINK, GLOW, PURPLE]
+        title_label.config(fg=colors[glow_state[0] % len(colors)])
+        glow_state[0] += 1
+        root.after(600, animate_title)
+
+    # ===== Refresh =====
+    def refresh():
+        try:
+            labels["Scanned"].config(text=str(scanned))
+            labels["Found"].config(text=str(found))
+            labels["With Players"].config(text=str(with_players))
+            labels["Webhooks Sent"].config(text=str(sent_count))
+
+            rate = compute_rate_per_hour(60)
+            labels["Server scanner per hour"].config(text=f"{rate:.1f}")
+
+            recent_box.delete(0, tk.END)
+            with recent_found_lock:
+                for ip in list(recent_found):
+                    recent_box.insert(tk.END, ip)
+
+        except:
+            pass
+
+        root.after(update_interval_ms, refresh)
+
+    animate_title()
+    root.after(200, refresh)
+    root.mainloop()
 
 
 # ================================ IP =================================
@@ -468,7 +630,7 @@ async def webhook(msg):
     global http_session
     if http_session is None:
         http_session = aiohttp.ClientSession(
-            timeout=aiohttp.ClientTimeout(total=5)
+            timeout=aiohttp.ClientTimeout(total=getattr(config, 'WEBHOOK_TIMEOUT', 3))
         )
     # Allow either a plain string message or a dict representing an embed
     payload = {}
@@ -489,10 +651,15 @@ async def webhook(msg):
         
 # ========= SCAN =========
 async def scan(ip, sem):
-    global scanned, found, with_players
+    global scanned, found, with_players, sent_count
 
     async with sem:
         scanned += 1
+        try:
+            with scan_times_lock:
+                scan_times.append(time.time())
+        except Exception:
+            pass
         set_title()
         print(SCAN + f"[SCAN] {ip}", flush=True)
 
@@ -503,6 +670,11 @@ async def scan(ip, sem):
             return
 
         found += 1
+        try:
+            with recent_found_lock:
+                recent_found.appendleft(f"{ip}:{config.PORT}")
+        except Exception:
+            pass
         set_title()
 
         players = data["players"]["online"]
@@ -544,8 +716,9 @@ async def scan(ip, sem):
 
             key = f"{ip}:{config.PORT}"
             if await mark_sent(key):
-                await webhook(embed)
-                print(WEBHOOK + f"[WEBHOOK] sent")
+                asyncio.create_task(webhook(embed))
+                sent_count += 1
+                print(WEBHOOK + f"[WEBHOOK] queued")
             else:
                 print(WEBHOOK + f"[SKIP] {key} already sent")
 
@@ -570,8 +743,9 @@ async def scan(ip, sem):
 
             key = f"{ip}:{config.PORT}"
             if await mark_sent(key):
-                await webhook(empty_embed)
-                print(WEBHOOK + f"[WEBHOOK] sent (empty)")
+                asyncio.create_task(webhook(empty_embed))
+                sent_count += 1
+                print(WEBHOOK + f"[WEBHOOK] queued (empty)")
             else:
                 print(WEBHOOK + f"[SKIP] {key} already sent")
 
@@ -591,6 +765,14 @@ if __name__ == "__main__":
     # make the console a bit larger on start
     set_console_size(cols=120, lines=40)
     show_startup(10.0)
+    # start the stats window in a background thread (if tkinter available)
+    try:
+        if tk is not None:
+            threading.Thread(target=run_stats_window, daemon=True).start()
+        else:
+            print(WEBHOOK + "[STATS] tkinter not available; stats window disabled")
+    except Exception:
+        pass
     try:
         asyncio.run(main())
     except KeyboardInterrupt:

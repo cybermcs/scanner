@@ -1,0 +1,303 @@
+﻿[11:14:44] 54.38.45.159:25565 login pkt=0x1 len=171
+[11:14:44] 54.38.45.159:25565 → raw=online_mode
+[11:14:44] 54.38.45.159:25565 → Online-mode ❌
+[11:14:56] 5.51.151.173:25565 login pkt=0x1 len=171
+[11:14:56] 5.51.151.173:25565 → raw=online_mode
+[11:14:56] 5.51.151.173:25565 → Online-mode ❌
+[11:14:59] 88.212.44.12:25565 login pkt=0x0 len=48
+[11:14:59] 88.212.44.12:25565 disconnect: sorry, but you are not in whitelist or frozen
+[11:14:59] 88.212.44.12:25565 → raw=cracked_whitelist
+[11:14:59] 88.212.44.12:25565 → Cracked ✅ | Whitelisted ❌
+[11:15:04] 107.175.1.32:25565 login pkt=0x0 len=232
+[11:15:04] 107.175.1.32:25565 disconnect: disconnect.genericreason (internal exception: io.netty.handler.codec.decoderexception: java.io.ioexception: packet 2/0 (class_2915) was larger than i 
+[11:15:04] 107.175.1.32:25565 → raw=error:bad packet format
+[11:15:04] 107.175.1.32:25565 → error:bad packet format
+[11:15:12] 185.130.225.91:25565 login pkt=0x3 len=2
+[11:15:12] 185.130.225.91:25565 compression enabled threshold=256
+[11:15:12] 185.130.225.91:25565 login pkt=0x2 len=29
+[11:15:12] 185.130.225.91:25565 → raw=cracked_open
+[11:15:12] 185.130.225.91:25565 → Cracked ✅ | No whitelist ✅
+[11:15:26] 157.245.127.154:25565 login pkt=0x0 len=42
+[11:15:26] 157.245.127.154:25565 disconnect: you are not whitelisted on this server!
+[11:15:26] 157.245.127.154:25565 → raw=cracked_whitelist
+[11:15:26] 157.245.127.154:25565 → Cracked ✅ | Whitelisted ❌
+[11:15:44] 152.53.131.242:25565 login pkt=0x1 len=171
+[11:15:44] 152.53.131.242:25565 → raw=online_mode
+[11:15:44] 152.53.131.242:25565 → Online-mode ❌
+[11:15:46] 88.211.248.216:25565 login pkt=0x1 len=171
+[11:15:46] 88.211.248.216:25565 → raw=online_mode
+[11:15:46] 88.211.248.216:25565 → Online-mode ❌
+[11:16:02] 217.182.205.30:25565 login pkt=0x0 len=232
+[11:16:02] 217.182.205.30:25565 disconnect: disconnect.genericreason (internal exception: io.netty.handler.codec.decoderexception: java.io.ioexception: packet 2/0 (class_2915) was larger than i 
+[11:16:02] 217.182.205.30:25565 → raw=error:bad packet format
+[11:16:02] 217.182.205.30:25565 → error:bad packet format
+[11:16:16] 213.35.105.171:25565 login pkt=0x1 len=171
+[11:16:16] 213.35.105.171:25565 → raw=online_mode
+[11:16:16] 213.35.105.171:25565 → Online-mode ❌
+[11:16:43] 116.203.92.180:25565 login pkt=0x1 len=171
+[11:16:43] 116.203.92.180:25565 → raw=online_mode
+[11:16:43] 116.203.92.180:25565 → Online-mode ❌
+[11:17:00] 107.172.170.18:25565 login pkt=0x0 len=30
+[11:17:00] 107.172.170.18:25565 disconnect: 服务器已开启白名单
+[11:17:00] 107.172.170.18:25565 → raw=cracked_plugin:服务器已开启白名单
+[11:17:00] 107.172.170.18:25565 → Cracked ✅ | Plugin gate: 服务器已开启白名单
+[11:17:06] 88.212.46.66:25565 login pkt=0x1 len=171
+[11:17:06] 88.212.46.66:25565 → raw=online_mode
+[11:17:06] 88.212.46.66:25565 → Online-mode ❌
+[11:17:08] 185.128.227.203:25565 login pkt=0x3 len=2
+[11:17:08] 185.128.227.203:25565 compression enabled threshold=256
+[11:17:08] 185.128.227.203:25565 login pkt=0x2 len=27
+[11:17:09] 185.128.227.203:25565 config pkt=0x19 len=183
+[11:17:09] 185.128.227.203:25565 → raw=cracked_open
+[11:17:09] 185.128.227.203:25565 → Cracked ✅ | No whitelist ✅
+[11:17:13] 89.58.71.82:25565 login pkt=0x1 len=171
+[11:17:13] 89.58.71.82:25565 → raw=online_mode
+[11:17:13] 89.58.71.82:25565 → Online-mode ❌
+[11:17:32] 88.211.237.18:25565 login pkt=0x1 len=171
+[11:17:32] 88.211.237.18:25565 → raw=online_mode
+[11:17:32] 88.211.237.18:25565 → Online-mode ❌
+[11:17:42] 46.42.19.151:25565 login pkt=0x0 len=126
+[11:17:42] 46.42.19.151:25565 disconnect: this server has mods that require forge to be installed on the client. contact your server admin for more details.
+[11:17:42] 46.42.19.151:25565 → raw=cracked_plugin:this server has mods that require forge to be installed on the client. contact your server admin for
+[11:17:42] 46.42.19.151:25565 → Cracked ✅ | Plugin gate: this server has mods that require forge to be installed on t
+[11:17:42] 101.43.162.131:25565 login pkt=0x1 len=171
+[11:17:42] 101.43.162.131:25565 → raw=online_mode
+[11:17:42] 101.43.162.131:25565 → Online-mode ❌
+[11:17:56] 64.225.244.106:25565 login pkt=0x1 len=170
+[11:17:56] 64.225.244.106:25565 → raw=online_mode
+[11:17:56] 64.225.244.106:25565 → Online-mode ❌
+[11:17:57] 46.105.42.114:25565 login pkt=0x3 len=2
+[11:17:57] 46.105.42.114:25565 compression enabled threshold=256
+[11:17:57] 46.105.42.114:25565 login pkt=0x2 len=29
+[11:17:57] 46.105.42.114:25565 → raw=cracked_open
+[11:17:57] 46.105.42.114:25565 → Cracked ✅ | No whitelist ✅
+[11:18:00] 116.203.254.50:25565 login pkt=0x1 len=170
+[11:18:00] 116.203.254.50:25565 → raw=online_mode
+[11:18:00] 116.203.254.50:25565 → Online-mode ❌
+[11:18:22] 91.135.53.69:25565 login pkt=0x1 len=171
+[11:18:22] 91.135.53.69:25565 → raw=online_mode
+[11:18:22] 91.135.53.69:25565 → Online-mode ❌
+[11:18:25] 67.186.231.9:25565 login pkt=0x1 len=171
+[11:18:25] 67.186.231.9:25565 → raw=online_mode
+[11:18:25] 67.186.231.9:25565 → Online-mode ❌
+[11:18:43] 119.29.54.192:25565 → raw=timeout
+[11:18:43] 119.29.54.192:25565 → Timed out
+[11:18:58] 159.69.50.120:25565 login pkt=0x1 len=170
+[11:18:58] 159.69.50.120:25565 → raw=online_mode
+[11:18:58] 159.69.50.120:25565 → Online-mode ❌
+[11:19:26] 45.55.199.155:25565 login pkt=0x1 len=170
+[11:19:26] 45.55.199.155:25565 → raw=online_mode
+[11:19:26] 45.55.199.155:25565 → Online-mode ❌
+[11:19:28] 74.134.16.203:25565 login pkt=0x1 len=171
+[11:19:28] 74.134.16.203:25565 → raw=online_mode
+[11:19:28] 74.134.16.203:25565 → Online-mode ❌
+[11:19:51] 45.81.233.176:25565 login pkt=0x0 len=90
+[11:19:51] 45.81.233.176:25565 disconnect: {"extra":[{"color":"red","text":"outdated client! please use 1.8.x - 1.19.x"}],"text":""}
+[11:19:51] 45.81.233.176:25565 → raw=cracked_plugin:{"extra":[{"color":"red","text":"outdated client! please use 1.8.x - 1.19.x"}],"text":""}
+[11:19:51] 45.81.233.176:25565 → Cracked ✅ | Plugin gate: {"extra":[{"color":"red","text":"outdated client! please use
+[11:19:58] 159.69.152.58:25565 login pkt=0x1 len=171
+[11:19:58] 159.69.152.58:25565 → raw=online_mode
+[11:19:58] 159.69.152.58:25565 → Online-mode ❌
+[11:20:32] 162.43.92.7:25565 login pkt=0x1 len=171
+[11:20:32] 162.43.92.7:25565 → raw=online_mode
+[11:20:32] 162.43.92.7:25565 → Online-mode ❌
+[11:21:00] 15.204.13.250:25565 login pkt=0x1 len=171
+[11:21:00] 15.204.13.250:25565 → raw=online_mode
+[11:21:00] 15.204.13.250:25565 → Online-mode ❌
+[11:21:10] 5.39.63.118:25565 login pkt=0x1 len=171
+[11:21:10] 5.39.63.118:25565 → raw=online_mode
+[11:21:10] 5.39.63.118:25565 → Online-mode ❌
+[11:21:12] 31.18.226.204:25565 login pkt=0x0 len=131
+[11:21:12] 31.18.226.204:25565 disconnect: this server has mods that require fml/forge to be installed on the client. contact your server admin for more details.
+[11:21:12] 31.18.226.204:25565 → raw=cracked_plugin:this server has mods that require fml/forge to be installed on the client. contact your server admin
+[11:21:12] 31.18.226.204:25565 → Cracked ✅ | Plugin gate: this server has mods that require fml/forge to be installed 
+[11:21:13] 185.236.139.195:25565 login pkt=0x0 len=126
+[11:21:13] 185.236.139.195:25565 disconnect: this server has mods that require forge to be installed on the client. contact your server admin for more details.
+[11:21:13] 185.236.139.195:25565 → raw=cracked_plugin:this server has mods that require forge to be installed on the client. contact your server admin for
+[11:21:13] 185.236.139.195:25565 → Cracked ✅ | Plugin gate: this server has mods that require forge to be installed on t
+[11:21:15] 129.146.247.184:25565 login pkt=0x1 len=171
+[11:21:15] 129.146.247.184:25565 → raw=online_mode
+[11:21:15] 129.146.247.184:25565 → Online-mode ❌
+[11:21:34] 77.85.61.125:25565 login pkt=0x1 len=171
+[11:21:34] 77.85.61.125:25565 → raw=online_mode
+[11:21:34] 77.85.61.125:25565 → Online-mode ❌
+[11:22:15] 185.107.194.171:25565 → raw=error:[WinError 10054] An existing connection was forcibly closed by the remote host
+[11:22:15] 185.107.194.171:25565 → error:[WinError 10054] An existing connection was forcibly closed by the remote 
+[11:22:44] 104.238.221.133:25565 login pkt=0x0 len=804
+[11:22:44] 104.238.221.133:25565 disconnect: {"extra":[{"color":"dark_red","text":"[nlogin] el nombre de host que se está utilizando "},{"color":
+[11:22:44] 104.238.221.133:25565 → raw=cracked_plugin:{"extra":[{"color":"dark_red","text":"[nlogin] el nombre de host que se está utilizando "},{"color":
+[11:22:44] 104.238.221.133:25565 → Cracked ✅ | Plugin gate: {"extra":[{"color":"dark_red","text":"[nlogin] el nombre de 
+[11:23:13] 23.228.162.231:25565 login pkt=0x1 len=171
+[11:23:13] 23.228.162.231:25565 → raw=online_mode
+[11:23:13] 23.228.162.231:25565 → Online-mode ❌
+[11:23:42] 88.211.212.92:25565 login pkt=0x1 len=171
+[11:23:42] 88.211.212.92:25565 → raw=online_mode
+[11:23:42] 88.211.212.92:25565 → Online-mode ❌
+[11:23:45] 185.24.191.71:25565 login pkt=0x1 len=171
+[11:23:45] 185.24.191.71:25565 → raw=online_mode
+[11:23:45] 185.24.191.71:25565 → Online-mode ❌
+[11:24:04] 199.195.140.62:25565 login pkt=0x1 len=171
+[11:24:04] 199.195.140.62:25565 → raw=online_mode
+[11:24:04] 199.195.140.62:25565 → Online-mode ❌
+[11:24:48] 217.154.210.238:25565 login pkt=0x1 len=170
+[11:24:48] 217.154.210.238:25565 → raw=online_mode
+[11:24:48] 217.154.210.238:25565 → Online-mode ❌
+[11:24:51] 54.37.199.64:25565 login pkt=0x0 len=126
+[11:24:51] 54.37.199.64:25565 disconnect: this server has mods that require forge to be installed on the client. contact your server admin for more details.
+[11:24:51] 54.37.199.64:25565 → raw=cracked_plugin:this server has mods that require forge to be installed on the client. contact your server admin for
+[11:24:51] 54.37.199.64:25565 → Cracked ✅ | Plugin gate: this server has mods that require forge to be installed on t
+[11:24:55] 51.38.189.49:25565 login pkt=0x3 len=2
+[11:24:55] 51.38.189.49:25565 compression enabled threshold=1024
+[11:24:55] 51.38.189.49:25565 login pkt=0x2 len=29
+[11:24:56] 51.38.189.49:25565 → raw=cracked_open
+[11:24:56] 51.38.189.49:25565 → Cracked ✅ | No whitelist ✅
+[11:25:26] 46.105.77.108:25565 login pkt=0x1 len=171
+[11:25:26] 46.105.77.108:25565 → raw=online_mode
+[11:25:26] 46.105.77.108:25565 → Online-mode ❌
+[11:25:37] 138.68.122.181:25565 login pkt=0x1 len=171
+[11:25:37] 138.68.122.181:25565 → raw=online_mode
+[11:25:37] 138.68.122.181:25565 → Online-mode ❌
+[11:25:56] 88.211.238.73:25565 login pkt=0x0 len=126
+[11:25:56] 88.211.238.73:25565 disconnect: this server has mods that require forge to be installed on the client. contact your server admin for more details.
+[11:25:56] 88.211.238.73:25565 → raw=cracked_plugin:this server has mods that require forge to be installed on the client. contact your server admin for
+[11:25:56] 88.211.238.73:25565 → Cracked ✅ | Plugin gate: this server has mods that require forge to be installed on t
+[11:25:56] 45.81.235.40:25565 login pkt=0x1 len=171
+[11:25:56] 45.81.235.40:25565 → raw=online_mode
+[11:25:56] 45.81.235.40:25565 → Online-mode ❌
+[11:26:23] 162.43.20.51:25565 login pkt=0x0 len=225
+[11:26:23] 162.43.20.51:25565 disconnect: disconnect.genericreason (internal exception: io.netty.handler.codec.decoderexception: java.io.ioexception: packet 2/0 (abz) was larger than i expecte
+[11:26:23] 162.43.20.51:25565 → raw=error:bad packet format
+[11:26:23] 162.43.20.51:25565 → error:bad packet format
+[11:26:27] 185.23.5.195:25565 login pkt=0x0 len=49
+[11:26:27] 185.23.5.195:25565 disconnect: csatlakozas elott regisztalnod kell discordon.
+[11:26:27] 185.23.5.195:25565 → raw=cracked_plugin:csatlakozas elott regisztalnod kell discordon.
+[11:26:27] 185.23.5.195:25565 → Cracked ✅ | Plugin gate: csatlakozas elott regisztalnod kell discordon.
+[11:26:56] 88.211.239.61:25565 login pkt=0x1 len=171
+[11:26:56] 88.211.239.61:25565 → raw=online_mode
+[11:26:56] 88.211.239.61:25565 → Online-mode ❌
+[11:26:58] 116.203.69.89:25565 login pkt=0x1 len=171
+[11:26:58] 116.203.69.89:25565 → raw=online_mode
+[11:26:58] 116.203.69.89:25565 → Online-mode ❌
+[11:27:07] 45.89.140.194:25565 login pkt=0x0 len=126
+[11:27:07] 45.89.140.194:25565 disconnect: this server has mods that require forge to be installed on the client. contact your server admin for more details.
+[11:27:07] 45.89.140.194:25565 → raw=cracked_plugin:this server has mods that require forge to be installed on the client. contact your server admin for
+[11:27:07] 45.89.140.194:25565 → Cracked ✅ | Plugin gate: this server has mods that require forge to be installed on t
+[11:27:07] 31.16.127.203:25565 login pkt=0x1 len=171
+[11:27:07] 31.16.127.203:25565 → raw=online_mode
+[11:27:07] 31.16.127.203:25565 → Online-mode ❌
+[11:27:36] 88.211.208.210:25565 login pkt=0x0 len=126
+[11:27:36] 88.211.208.210:25565 disconnect: this server has mods that require forge to be installed on the client. contact your server admin for more details.
+[11:27:36] 88.211.208.210:25565 → raw=cracked_plugin:this server has mods that require forge to be installed on the client. contact your server admin for
+[11:27:36] 88.211.208.210:25565 → Cracked ✅ | Plugin gate: this server has mods that require forge to be installed on t
+[11:27:50] 74.136.154.67:25565 login pkt=0x1 len=171
+[11:27:50] 74.136.154.67:25565 → raw=online_mode
+[11:27:50] 74.136.154.67:25565 → Online-mode ❌
+[11:28:01] 34.64.202.21:25565 login pkt=0x1 len=171
+[11:28:01] 34.64.202.21:25565 → raw=online_mode
+[11:28:01] 34.64.202.21:25565 → Online-mode ❌
+[11:28:10] 185.107.192.198:25565 → raw=error:[WinError 10054] An existing connection was forcibly closed by the remote host
+[11:28:10] 185.107.192.198:25565 → error:[WinError 10054] An existing connection was forcibly closed by the remote 
+[11:28:23] 185.17.255.19:25565 login pkt=0x1 len=171
+[11:28:23] 185.17.255.19:25565 → raw=online_mode
+[11:28:23] 185.17.255.19:25565 → Online-mode ❌
+[11:28:26] 173.212.204.56:25565 login pkt=0x3 len=2
+[11:28:26] 173.212.204.56:25565 compression enabled threshold=256
+[11:28:26] 173.212.204.56:25565 login pkt=0x2 len=28
+[11:28:26] 173.212.204.56:25565 → raw=cracked_open
+[11:28:26] 173.212.204.56:25565 → Cracked ✅ | No whitelist ✅
+[11:29:04] 15.204.150.100:25565 login pkt=0x1 len=171
+[11:29:04] 15.204.150.100:25565 → raw=online_mode
+[11:29:04] 15.204.150.100:25565 → Online-mode ❌
+[11:29:16] 45.59.168.224:25565 login pkt=0x1 len=171
+[11:29:16] 45.59.168.224:25565 → raw=online_mode
+[11:29:16] 45.59.168.224:25565 → Online-mode ❌
+[11:29:27] 91.133.93.42:25565 login pkt=0x0 len=126
+[11:29:27] 91.133.93.42:25565 disconnect: this server has mods that require forge to be installed on the client. contact your server admin for more details.
+[11:29:27] 91.133.93.42:25565 → raw=cracked_plugin:this server has mods that require forge to be installed on the client. contact your server admin for
+[11:29:27] 91.133.93.42:25565 → Cracked ✅ | Plugin gate: this server has mods that require forge to be installed on t
+[11:29:47] 74.130.219.106:25565 login pkt=0x1 len=171
+[11:29:47] 74.130.219.106:25565 → raw=online_mode
+[11:29:47] 74.130.219.106:25565 → Online-mode ❌
+[11:29:56] 46.107.93.165:25565 login pkt=0x1 len=171
+[11:29:56] 46.107.93.165:25565 → raw=online_mode
+[11:29:56] 46.107.93.165:25565 → Online-mode ❌
+[11:29:56] 138.3.240.189:25565 login pkt=0x1 len=171
+[11:29:56] 138.3.240.189:25565 → raw=online_mode
+[11:29:56] 138.3.240.189:25565 → Online-mode ❌
+[11:30:11] 144.76.105.92:25565 login pkt=0x1 len=171
+[11:30:11] 144.76.105.92:25565 → raw=online_mode
+[11:30:11] 144.76.105.92:25565 → Online-mode ❌
+[11:31:17] 143.47.230.166:25565 login pkt=0x1 len=171
+[11:31:17] 143.47.230.166:25565 → raw=online_mode
+[11:31:17] 143.47.230.166:25565 → Online-mode ❌
+[11:31:46] 185.15.73.40:25565 login pkt=0x1 len=171
+[11:31:46] 185.15.73.40:25565 → raw=online_mode
+[11:31:46] 185.15.73.40:25565 → Online-mode ❌
+[11:31:52] 89.58.32.49:25565 login pkt=0x1 len=171
+[11:31:52] 89.58.32.49:25565 → raw=online_mode
+[11:31:52] 89.58.32.49:25565 → Online-mode ❌
+[11:32:02] 45.87.174.56:25565 login pkt=0x0 len=131
+[11:32:02] 45.87.174.56:25565 disconnect: this server has mods that require fml/forge to be installed on the client. contact your server admin for more details.
+[11:32:02] 45.87.174.56:25565 → raw=cracked_plugin:this server has mods that require fml/forge to be installed on the client. contact your server admin
+[11:32:02] 45.87.174.56:25565 → Cracked ✅ | Plugin gate: this server has mods that require fml/forge to be installed 
+[11:33:14] 157.245.173.199:25565 login pkt=0x1 len=171
+[11:33:14] 157.245.173.199:25565 → raw=online_mode
+[11:33:14] 157.245.173.199:25565 → Online-mode ❌
+[11:33:55] 107.179.131.182:25565 login pkt=0x0 len=259
+[11:33:55] 107.179.131.182:25565 disconnect: disconnect.genericreason (internal exception: io.netty.handler.codec.decoderexception: java.lang.indexoutofboundsexception: readerindex(12) + length(1
+[11:33:55] 107.179.131.182:25565 → raw=error:bad packet format
+[11:33:55] 107.179.131.182:25565 → error:bad packet format
+[11:34:14] 5.107.180.222:25565 login pkt=0x1 len=171
+[11:34:14] 5.107.180.222:25565 → raw=online_mode
+[11:34:14] 5.107.180.222:25565 → Online-mode ❌
+[11:34:59] 172.93.103.28:25565 login pkt=0x1 len=171
+[11:34:59] 172.93.103.28:25565 → raw=online_mode
+[11:34:59] 172.93.103.28:25565 → Online-mode ❌
+[11:35:25] 167.114.185.115:25565 login pkt=0x1 len=187
+[11:35:25] 167.114.185.115:25565 → raw=online_mode
+[11:35:25] 167.114.185.115:25565 → Online-mode ❌
+[11:35:49] 45.81.235.100:25565 login pkt=0x1 len=171
+[11:35:49] 45.81.235.100:25565 → raw=online_mode
+[11:35:49] 45.81.235.100:25565 → Online-mode ❌
+[11:35:52] 185.15.72.70:25565 login pkt=0x1 len=171
+[11:35:52] 185.15.72.70:25565 → raw=online_mode
+[11:35:52] 185.15.72.70:25565 → Online-mode ❌
+[11:35:56] 31.24.79.35:25565 login pkt=0x1 len=171
+[11:35:56] 31.24.79.35:25565 → raw=online_mode
+[11:35:56] 31.24.79.35:25565 → Online-mode ❌
+[11:36:17] 145.239.71.240:25565 login pkt=0x1 len=171
+[11:36:17] 145.239.71.240:25565 → raw=online_mode
+[11:36:17] 145.239.71.240:25565 → Online-mode ❌
+[11:36:28] 51.15.116.37:25565 login pkt=0x1 len=171
+[11:36:28] 51.15.116.37:25565 → raw=online_mode
+[11:36:28] 51.15.116.37:25565 → Online-mode ❌
+[11:36:32] 178.63.164.144:25565 login pkt=0x1 len=171
+[11:36:32] 178.63.164.144:25565 → raw=online_mode
+[11:36:32] 178.63.164.144:25565 → Online-mode ❌
+[11:36:39] 145.239.95.12:25565 login pkt=0x1 len=171
+[11:36:39] 145.239.95.12:25565 → raw=online_mode
+[11:36:39] 145.239.95.12:25565 → Online-mode ❌
+[11:37:13] 159.69.3.76:25565 login pkt=0x1 len=171
+[11:37:13] 159.69.3.76:25565 → raw=online_mode
+[11:37:13] 159.69.3.76:25565 → Online-mode ❌
+[11:37:36] 45.141.24.149:25565 login pkt=0x1 len=171
+[11:37:36] 45.141.24.149:25565 → raw=online_mode
+[11:37:36] 45.141.24.149:25565 → Online-mode ❌
+[11:37:50] 88.211.213.14:25565 login pkt=0x1 len=171
+[11:37:50] 88.211.213.14:25565 → raw=online_mode
+[11:37:50] 88.211.213.14:25565 → Online-mode ❌
+[11:38:10] 78.68.119.140:25565 login pkt=0x0 len=126
+[11:38:10] 78.68.119.140:25565 disconnect: this server has mods that require forge to be installed on the client. contact your server admin for more details.
+[11:38:10] 78.68.119.140:25565 → raw=cracked_plugin:this server has mods that require forge to be installed on the client. contact your server admin for
+[11:38:10] 78.68.119.140:25565 → Cracked ✅ | Plugin gate: this server has mods that require forge to be installed on t
+[11:38:16] 116.44.185.75:25565 login pkt=0x0 len=240
+[11:38:16] 116.44.185.75:25565 disconnect: disconnect.genericreason (internal exception: io.netty.handler.codec.decoderexception: java.io.ioexception: packet 2/0 (packetlogininstart) was larger
+[11:38:16] 116.44.185.75:25565 → raw=error:bad packet format
+[11:38:16] 116.44.185.75:25565 → error:bad packet format
+[11:38:20] 96.9.213.246:25565 login pkt=0x2 len=22
+[11:38:20] 96.9.213.246:25565 config pkt=0x1f len=8
+[11:38:20] 96.9.213.246:25565 → raw=cracked_open
+[11:38:20] 96.9.213.246:25565 → Cracked ✅ | No whitelist ✅
+[11:38:22] 185.9.105.99:25565 login pkt=0x1 len=170
+[11:38:22] 185.9.105.99:25565 → raw=online_mode
+[11:38:22] 185.9.105.99:25565 → Online-mode ❌
