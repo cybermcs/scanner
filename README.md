@@ -313,7 +313,7 @@ python -c "import tkinter; print(tkinter.Tcl().eval('info patchlevel'))"
 
 **Developers:**
 - 🌹 **n3xtgen** (aka EliasPython)
-- 🐍 **m3gamichi** (aka m3gamichi)
+- 🐍 **Proxyshart** (aka meowinc-owner)
 
 **Special Thanks:**
 - Minecraft Community for protocol reverse-engineering
